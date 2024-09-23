@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "tts-api"
+version = "0.1.0"
+description = ""
+authors = ["pguin-sudo <mailfordevelopmentandstuff@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.9.13"
+tts = "^0.22.0"
+fastapi = "^0.115.0"
+uvicorn = "^0.30.6"
+torch = { version = "^2.4.1+cu124", source = "pytorch-gpu-src" }
+torchvision = { version = "^0.19.1+cu124", source = "pytorch-gpu-src" }
+torchaudio = { version = "^2.4.1+cu124", source = "pytorch-gpu-src" }
+
+[[tool.poetry.source]]
+name = "pytorch-gpu-src"
+url = "https://download.pytorch.org/whl/cu124"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
